@@ -75,14 +75,14 @@ export function AudioCard({ item, onSave, onDelete }: AudioCardProps) {
   return (
     <div className="bg-white shadow-md rounded-lg p-6 mb-4">
       <div className="flex justify-between items-center mb-4">
-        <div className="flex space-x-2">
+        <div className="flex items-center space-x-2">
             <button
               onClick={handleDelete}
               className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 text-sm font-medium"
             >
               <MdDelete />
             </button>
-            <h3 className="text-lg font-semibold">ID: {item.id}</h3>
+            <h3 className="sm:text-lg text-sm font-semibold">ID: {item.id}</h3>
         </div>
         <div className="flex items-center space-x-4">
           <label className="flex items-center cursor-pointer">
@@ -92,7 +92,7 @@ export function AudioCard({ item, onSave, onDelete }: AudioCardProps) {
               onChange={(e) => setIsCorrect(e.target.checked)}
               className="form-checkbox h-5 w-5 text-blue-600"
             />
-            <span className="ml-2 text-sm text-gray-700">Is Correct: {isCorrect ? "True" : "False"}</span>
+            <span className="ml-2 text-sm text-gray-700">{isCorrect ? "True" : "False"}</span>
           </label>
           {(isEditing || hasChanges) && ( // Show save button if editing or has changes
             <button

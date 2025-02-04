@@ -63,7 +63,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
       <div className="relative w-full max-w-3xl flex items-center justify-center">
-          <h1 className="text-3xl font-bold mb-8">Audio Ma'lumotlar</h1>
+          <h1 className="md:text-3xl text-xl font-bold mb-8">Audio Ma'lumotlar</h1>
           <a href={baseUrl + "/export-csv"} className="absolute right-0 rounded-lg text-white px-3 py-2 bg-blue-600">
             <BiDownload size={22}/>
           </a>
